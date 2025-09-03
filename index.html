@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Supply Chain Expertise Hub</title>
+    <meta name="description"
+        content="Comprehensive guides on AI startup success patterns and supply chain automation opportunities">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4ecdc4;
+        }
+
+        .hero {
+            padding: 120px 2rem 80px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #b0b0b0;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+            color: white;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
+        }
+
+        .cta-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .guides-section {
+            padding: 80px 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4ecdc4;
+            margin-bottom: 3rem;
+        }
+
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .guide-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .guide-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(78, 205, 196, 0.3);
+            box-shadow: 0 20px 60px rgba(78, 205, 196, 0.1);
+        }
+
+        .guide-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .guide-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .guide-card p {
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .guide-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .guide-features li {
+            padding: 0.5rem 0;
+            color: #d0d0d0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .guide-features li::before {
+            content: "✓";
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        .guide-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .guide-button {
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(69, 183, 209, 0.1));
+            padding: 60px 2rem;
+            margin: 60px 0;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #4ecdc4;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #b0b0b0;
+            font-weight: 500;
+        }
+
+        .about-section {
+            padding: 80px 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #4ecdc4;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .guides-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AI & Supply Chain Hub</div>
+            <ul class="nav-links">
+                <li><a href="#guides">Guides</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="https://github.com/oelmady" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/omar-elmady" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Master AI in Supply Chain & Startups</h1>
+        <p>Comprehensive guides to landing high-paying roles in AI startups and building supply chain automation
+            expertise. From freelancing to entrepreneurship - your path to $100K+ remote careers.</p>
+        <div class="cta-buttons">
+            <a href="#guides" class="cta-button cta-primary">
+                🚀 Explore Guides
+            </a>
+            <a href="https://github.com/oelmady" class="cta-button cta-secondary" target="_blank">
+                📁 View Code
+            </a>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stats-container">
+            <h2 class="section-title">Market Opportunities</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">$100B+</span>
+                    <div class="stat-label">AI Funding 2024</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">$47.88B</span>
+                    <div class="stat-label">AI Manufacturing Market 2030</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">46.5%</span>
+                    <div class="stat-label">Annual Growth Rate</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">67%</span>
+                    <div class="stat-label">Companies Using Supply Chain AI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guides-section" id="guides">
+        <h2 class="section-title">Comprehensive Career Guides</h2>
+
+        <div class="guides-grid">
+            <div class="guide-card">
+                <span class="guide-icon">🚀</span>
+                <h3>AI Startup Success Patterns</h3>
+                <p>Your strategic guide to landing a founding engineer role at winning AI startups. Based on 2025 market
+                    research and insider insights.</p>
+
+                <ul class="guide-features">
+                    <li>Market analysis of $100B+ AI funding landscape</li>
+                    <li>Red flags to avoid (99% of wrapper apps will fail)</li>
+                    <li>Compensation trends (+5-20% AI premium)</li>
+                    <li>Interview questions and due diligence framework</li>
+                    <li>Interactive scoring system for opportunities</li>
+                </ul>
+
+                <div class="guide-buttons">
+                    <a href="guides/ai-startup-success.html" class="guide-button btn-primary">
+                        📖 Read Guide
+                    </a>
+                    <a href="guides/ai-startup-success-pdf.html" class="guide-button btn-secondary">
+                        📄 PDF Version
+                    </a>
+                </div>
+            </div>
+
+            <div class="guide-card">
+                <span class="guide-icon">🔗</span>
+                <h3>Supply Chain AI Automation</h3>
+                <p>Complete roadmap for entrepreneurs and freelancers in manufacturing AI. Build expertise while
+                    empowering your community with high-paying remote careers.</p>
+
+                <ul class="guide-features">
+                    <li>$50-300/hour freelance opportunities mapped</li>
+                    <li>Document AI, predictive maintenance, optimization</li>
+                    <li>Remote work landscape ($70K-$180K annually)</li>
+                    <li>Skills development roadmap from basics to expert</li>
+                    <li>Community training and wealth-building strategy</li>
+                </ul>
+
+                <div class="guide-buttons">
+                    <a href="guides/supply-chain-ai-guide.html" class="guide-button btn-primary">
+                        🔧 Explore Guide
+                    </a>
+                    <a href="#contact" class="guide-button btn-secondary">
+                        💬 Get Mentoring
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2 class="section-title">About This Hub</h2>
+            <p>These guides represent months of research into AI startup patterns, supply chain automation
+                opportunities, and remote work trends. Built to help our community access high-paying tech careers and
+                build economic independence through AI expertise.</p>
+
+            <p style="margin-top: 2rem;"><strong>Mission:</strong> Empower individuals with practical AI knowledge that
+                leads to real career advancement and financial freedom, while building strategic capabilities our
+                community needs.</p>
+
+            <div style="margin-top: 3rem;">
+                <a href="https://linkedin.com/in/omar-elmady" class="cta-button cta-primary" target="_blank">
+                    🤝 Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="mailto:oelmady@gmail.com">Contact</a>
+                <a href="https://github.com/oelmady" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/omar-elmady" target="_blank">LinkedIn</a>
+                <a href="#guides">Guides</a>
+            </div>
+            <p>&copy; 2025 AI & Supply Chain Hub. Built to empower careers through AI expertise.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
