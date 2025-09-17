@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-gray-900 via-fast-dark to-gray-800 text-gray-100;
+  }
+}
+
+@layer components {
+  .fast-gradient {
+    @apply bg-gradient-to-r from-fast-blue via-fast-light to-fast-accent;
+  }
+  
+  .business-equation-card {
+    @apply bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-fast-blue/50 transition-all duration-300;
+  }
+  
+  .problem-category-card {
+    @apply bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-fast-blue/50 hover:scale-105 transition-all duration-300 cursor-pointer;
+  }
+  
+  .tool-card {
+    @apply bg-gray-800/40 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-fast-blue/50 hover:shadow-xl hover:shadow-fast-blue/10 transition-all duration-300;
+  }
+  
+  .fast-button {
+    @apply bg-gradient-to-r from-fast-blue to-fast-light text-white font-semibold py-3 px-8 rounded-full hover:shadow-lg hover:shadow-fast-blue/25 transform hover:-translate-y-1 transition-all duration-300;
+  }
+  
+  .fast-button-secondary {
+    @apply bg-gray-800 text-fast-blue border border-fast-blue/50 font-semibold py-3 px-8 rounded-full hover:bg-fast-blue hover:text-white transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-fast-blue via-fast-light to-fast-accent bg-clip-text text-transparent;
+  }
+}
