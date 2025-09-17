@@ -1,7 +1,7 @@
 {
     "name": "omar-elmady-portfolio",
     "version": "0.1.0",
-    "homepage": "https://nexusautomationai.com",
+    "homepage": "https://oelmady.github.io",
     "private": true,
     "dependencies": {
         "@types/node": "^20.0.0",
