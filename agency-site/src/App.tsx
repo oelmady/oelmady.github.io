@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-import FlowchartPage from './pages/FlowchartPage';
-import GuidePage from './pages/GuidePage';
-import ToolsPage from './pages/ToolsPage';
+import AboutPage from './pages/AboutPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
     return (
@@ -15,9 +15,9 @@ function App() {
                 <main className="flex-grow">
                     <Routes>
                         <Route path="/" element={<HomePage />} />
-                        <Route path="/flowchart" element={<FlowchartPage />} />
-                        <Route path="/guide" element={<GuidePage />} />
-                        <Route path="/tools" element={<ToolsPage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/projects" element={<ProjectsPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
                     </Routes>
                 </main>
                 <Footer />

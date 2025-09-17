@@ -1,61 +1,61 @@
 import React from 'react';
-import { BarChart3, Zap, Users, TrendingUp, ArrowRight, CheckCircle, Star } from 'lucide-react';
+import { BarChart3, Zap, TrendingUp, ArrowRight, CheckCircle, Star, Code, Brain, Award } from 'lucide-react';
 
 const HomePage = () => {
     const heroStats = [
-        { number: '$2M+', label: 'Revenue Generated', icon: TrendingUp },
-        { number: '50+', label: 'Projects Delivered', icon: CheckCircle },
-        { number: '95%', label: 'Client Satisfaction', icon: Star },
-        { number: '3 weeks', label: 'Average ROI Timeline', icon: Zap },
+        { number: '$1M+', label: 'Revenue Enabled at AWS', icon: TrendingUp },
+        { number: '300+', label: 'Hours Saved via Automation', icon: CheckCircle },
+        { number: '95%', label: 'Test Coverage Achieved', icon: Star },
+        { number: '20+', label: 'Hours Saved Weekly', icon: Zap },
     ];
 
     const services = [
         {
-            title: 'Business Equation Assessment',
-            description: 'Deep analysis of your Profit = Revenue - Cost equation with AI-powered optimization opportunities',
-            icon: BarChart3,
-            benefits: ['Identify hidden cost centers', 'Revenue optimization strategies', 'Predictive profit modeling'],
-            cta: 'Start Assessment',
-            path: '/flowchart'
+            title: 'AI Automation Consulting',
+            description: 'Design and implement AI-powered workflows that save hundreds of hours and drive measurable business outcomes',
+            icon: Brain,
+            benefits: ['LLM integrations for marketing automation', 'Agentic workflows for lead generation', 'Enterprise system management'],
+            cta: 'View Portfolio',
+            path: '/projects'
         },
         {
-            title: 'Growth Acceleration',
-            description: 'Strategic Growth = Acquisition + Retention + Expansion framework implementation',
-            icon: TrendingUp,
-            benefits: ['Customer acquisition automation', 'Retention optimization systems', 'Expansion revenue strategies'],
-            cta: 'View Framework',
-            path: '/guide'
+            title: 'Full-Stack Development',
+            description: 'Build scalable, production-ready applications with modern frameworks and cloud-native architecture',
+            icon: Code,
+            benefits: ['Spring Boot & Java expertise', 'AWS cloud integration', 'Test-driven development'],
+            cta: 'See Projects',
+            path: '/projects'
         },
         {
-            title: 'Value Creation Systems',
-            description: 'Maximize Value = Cashflow - Risk through intelligent automation and process optimization',
-            icon: Users,
-            benefits: ['Cashflow acceleration', 'Risk mitigation protocols', 'Value realization tracking'],
-            cta: 'Explore Tools',
-            path: '/tools'
+            title: 'Technical Leadership',
+            description: 'Bridge business needs with technical solutions through data-driven analysis and strategic implementation',
+            icon: Award,
+            benefits: ['Cross-functional collaboration', 'Agile methodology expertise', 'Performance optimization'],
+            cta: 'Learn More',
+            path: '/about'
         },
     ];
 
     const processSteps = [
         {
             step: '01',
-            title: 'First Principles Analysis',
-            description: 'Break down your business challenges to fundamental components using proven frameworks'
+            title: 'Discovery & Analysis',
+            description: 'Understanding your business challenges and identifying automation opportunities'
         },
         {
             step: '02',
-            title: 'Action-Oriented Implementation',
-            description: '1-week sprints with measurable outcomes and immediate value creation'
+            title: 'Solution Design',
+            description: 'Architecting scalable, maintainable solutions with modern best practices'
         },
         {
             step: '03',
-            title: 'Second-Order Thinking',
-            description: 'Anticipate consequences and optimize for long-term strategic advantages'
+            title: 'Implementation',
+            description: 'Agile development with test-driven approach and continuous integration'
         },
         {
             step: '04',
-            title: 'Triangulation Validation',
-            description: 'Multi-perspective verification ensuring sustainable and scalable solutions'
+            title: 'Deployment & Optimization',
+            description: 'Production deployment with performance monitoring and ongoing optimization'
         },
     ];
 
@@ -68,29 +68,27 @@ const HomePage = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                                Transform Your Business with
-                                <span className="text-fast-blue block mt-2">AI Automation</span>
+                                Omar Elmady
+                                <span className="text-fast-blue block mt-2">AI Automation Consultant</span>
                             </h1>
                             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                                Using our proven FAST Framework, we deliver measurable ROI through intelligent automation.
-                                From process optimization to revenue acceleration - see results in weeks, not months.
+                                Full-stack developer and AI consultant with proven track record at AWS.
+                                Specializing in automation solutions that save hundreds of hours and drive measurable business outcomes.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 mb-12">
                                 <a
-                                    href="https://www.upwork.com/freelancers/~018a23423d96a2ea09"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    href="mailto:oelmady@gmail.com"
                                     className="inline-flex items-center space-x-2 bg-gradient-to-r from-fast-blue to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
                                 >
-                                    <span>Start Your Project</span>
+                                    <span>Get In Touch</span>
                                     <ArrowRight className="h-5 w-5" />
                                 </a>
                                 <a
-                                    href="/flowchart"
+                                    href="/projects"
                                     className="inline-flex items-center space-x-2 border-2 border-fast-blue text-fast-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-fast-blue hover:text-white transition-all duration-200"
                                 >
                                     <BarChart3 className="h-5 w-5" />
-                                    <span>Free Business Assessment</span>
+                                    <span>View Projects</span>
                                 </a>
                             </div>
                         </div>
@@ -117,11 +115,11 @@ const HomePage = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-fast-dark mb-4">
-                            FAST Framework Solutions
+                            Technical Expertise & Business Impact
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Our proven methodology delivers sustainable business transformation through
-                            systematic analysis and intelligent automation implementation.
+                            Combining software engineering excellence with AI automation expertise to deliver
+                            solutions that drive real business outcomes and measurable ROI.
                         </p>
                     </div>
 
@@ -162,10 +160,10 @@ const HomePage = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-fast-dark mb-4">
-                            The FAST Framework Process
+                            My Development Process
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Our systematic approach ensures consistent results and sustainable growth
+                            A systematic approach that ensures consistent results and sustainable growth
                             through proven methodologies and intelligent implementation.
                         </p>
                     </div>
@@ -196,23 +194,23 @@ const HomePage = () => {
                         Ready to Transform Your Business?
                     </h2>
                     <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-                        Join 50+ businesses that have achieved measurable ROI through our proven FAST Framework methodology.
-                        Get started with a free business equation assessment.
+                        Let's discuss how AI automation and modern development practices can drive
+                        measurable business outcomes for your organization.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <a
-                            href="mailto:omar.elmady@nexusautomationai.com"
+                            href="mailto:oelmady@gmail.com"
                             className="inline-flex items-center space-x-2 bg-gradient-to-r from-fast-blue to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
                         >
-                            <span>Get Free Consultation</span>
+                            <span>Get In Touch</span>
                             <ArrowRight className="h-5 w-5" />
                         </a>
                         <a
-                            href="/flowchart"
+                            href="/projects"
                             className="inline-flex items-center space-x-2 border-2 border-fast-blue text-fast-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-fast-blue hover:text-white transition-all duration-200"
                         >
                             <BarChart3 className="h-5 w-5" />
-                            <span>Start Assessment</span>
+                            <span>View Portfolio</span>
                         </a>
                     </div>
                 </div>

@@ -1,0 +1,57 @@
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: './agency-site/package-lock.json'
+        
+    - name: Install dependencies
+      run: |
+        cd agency-site
+        npm ci
+        
+    - name: Build React app
+      run: |
+        cd agency-site
+        npm run build
+        
+    - name: Prepare deployment
+      run: |
+        # Ensure CNAME is preserved
+        echo "nexusautomationai.com" > ./agency-site/build/CNAME
+        # Create archive directory for legacy content
+        mkdir -p ./agency-site/build/archive
+        cp -r ./assets ./agency-site/build/archive/ || true
+        cp -r ./guides ./agency-site/build/archive/ || true
+        cp ./industry.md ./agency-site/build/archive/ || true
+        cp ./whitepaper.md ./agency-site/build/archive/ || true
+        cp ./index.html ./agency-site/build/archive/legacy-index.html || true
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./agency-site/build

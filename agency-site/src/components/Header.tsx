@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Zap, BarChart3, Lightbulb, Wrench } from 'lucide-react';
+import { Menu, X, Zap, BarChart3, Wrench, Users } from 'lucide-react';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -8,9 +8,9 @@ const Header = () => {
 
     const navItems = [
         { name: 'Home', path: '/', icon: null },
-        { name: 'FAST Assessment', path: '/flowchart', icon: BarChart3 },
-        { name: 'Framework Guide', path: '/guide', icon: Lightbulb },
-        { name: 'AI Tools', path: '/tools', icon: Wrench },
+        { name: 'About', path: '/about', icon: Users },
+        { name: 'Projects', path: '/projects', icon: Wrench },
+        { name: 'Contact', path: '/contact', icon: BarChart3 },
     ];
 
     const isActivePath = (path: string) => {
@@ -27,8 +27,8 @@ const Header = () => {
                             <Zap className="h-6 w-6 text-white" />
                         </div>
                         <div>
-                            <span className="text-xl font-bold text-fast-dark">NexusAutomation</span>
-                            <div className="text-xs text-fast-blue font-medium">AI Agency Solutions</div>
+                            <span className="text-xl font-bold text-fast-dark">Omar Elmady</span>
+                            <div className="text-xs text-fast-blue font-medium">AI Consultant & Developer</div>
                         </div>
                     </Link>
 
@@ -41,8 +41,8 @@ const Header = () => {
                                     key={item.name}
                                     to={item.path}
                                     className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isActivePath(item.path)
-                                            ? 'bg-fast-blue text-white shadow-md'
-                                            : 'text-gray-700 hover:bg-gray-100 hover:text-fast-blue'
+                                        ? 'bg-fast-blue text-white shadow-md'
+                                        : 'text-gray-700 hover:bg-gray-100 hover:text-fast-blue'
                                         }`}
                                 >
                                     {Icon && <Icon className="h-4 w-4" />}
@@ -85,8 +85,8 @@ const Header = () => {
                                         to={item.path}
                                         onClick={() => setIsMenuOpen(false)}
                                         className={`flex items-center space-x-2 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${isActivePath(item.path)
-                                                ? 'bg-fast-blue text-white'
-                                                : 'text-gray-700 hover:bg-gray-100'
+                                            ? 'bg-fast-blue text-white'
+                                            : 'text-gray-700 hover:bg-gray-100'
                                             }`}
                                     >
                                         {Icon && <Icon className="h-4 w-4" />}

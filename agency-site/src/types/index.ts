@@ -17,8 +17,8 @@ export interface BusinessEquations {
     };
 }
 
-// FAST Framework Core Structure
-export interface FASTFramework {
+// Core Business Analysis Structure
+export interface FirstPrinciplesAnalysis {
     firstPrinciples: {
         fundamentalConstraints: {
             physical: string[];
@@ -67,9 +67,6 @@ export interface ProblemCategory {
     description: string;
     icon: string;
 
-    // FAST Framework Integration
-    fastFramework: FASTFramework;
-
     // Business Equation Mapping
     equationImpact: {
         revenue: number; // Monthly impact in dollars
@@ -111,7 +108,7 @@ export interface AITool {
         roiTimeline: string; // e.g., "30-60 days"
     };
 
-    // FAST Framework Implementation
+    // Implementation Details
     implementation: {
         setupTime: string;
         complexity: 'low' | 'medium' | 'high';
@@ -157,31 +154,6 @@ export interface CaseStudy {
     title: string;
     industry: string;
     companySize: string;
-
-    // FAST Framework Application
-    fastApplication: {
-        // First Principles Analysis
-        rootProblem: string;
-        fundamentalConstraints: string[];
-
-        // Action Oriented Solution
-        oneWeekSprint: {
-            day1_2: string;
-            day3_4: string;
-            day5_7: string;
-        };
-
-        // Second Order Analysis
-        consequences: {
-            positive: string[];
-            negative: string[];
-            mitigation: string[];
-        };
-
-        // Triangulation Results
-        alternativesConsidered: string[];
-        benchmarksUsed: string[];
-    };
 
     // Business Equation Impact
     businessEquations: BusinessEquations;
@@ -244,7 +216,7 @@ export interface AssessmentResult {
         paybackPeriod: number;
         annualValue: number;
     };
-    fastImplementationPlan: {
+    implementationPlan: {
         week1: string[];
         risks: string[];
         successCriteria: string[];

@@ -92,7 +92,7 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold mb-6">Connect</h3>
                         <div className="space-y-4">
                             <div>
-                                <p className="text-gray-300 mb-2">Omar El-Mady</p>
+                                <p className="text-gray-300 mb-2">Omar Elmady</p>
                                 <p className="text-sm text-fast-blue">AI Automation Specialist</p>
                             </div>
                             <div className="flex space-x-4">
@@ -123,9 +123,7 @@ const Footer = () => {
                             © {currentYear} NexusAutomation AI. All rights reserved.
                         </div>
                         <div className="flex flex-col md:flex-row text-sm text-gray-400 space-y-2 md:space-y-0 md:space-x-6">
-                            <span>Built with FAST Framework methodology</span>
-                            <span>•</span>
-                            <span>Proven ROI: $2M+ generated for clients</span>
+                            <span>Remember to smile!</span>
                         </div>
                     </div>
                 </div>
