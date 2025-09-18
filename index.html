@@ -350,6 +350,15 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            /* Make compact layout stack on mobile */
+            div[style*="grid-template-columns: 1fr 1fr"] {
+                display: block !important;
+            }
+
+            div[style*="grid-template-columns: 1fr 1fr"] > div {
+                margin-bottom: 2rem;
+            }
         }
     </style>
 </head>
@@ -362,6 +371,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#interests">Research</a></li>
                 <li><a href="https://nexusautomationai.com" target="_blank">My Agency</a></li>
                 <li><a href="https://github.com/oelmady" target="_blank">GitHub</a></li>
                 <li><a href="https://linkedin.com/in/omar-elmady" target="_blank">LinkedIn</a></li>
@@ -370,8 +380,9 @@
     </nav>
 
     <section class="hero">
-        <h1>Omar Elmady</h1>
-        <p>AI Automation Consultant & Full-Stack Developer with proven experience at AWS. Specializing in building
+        <h1>Hey there!</h1>
+        <p>I'm Omar Elmady, AI Automation Consultant & Full-Stack Developer with proven experience at AWS. I specialize
+            in building
             scalable, production-ready applications and AI-powered automation solutions that drive measurable business
             outcomes.</p>
         <div class="cta-buttons">
@@ -409,36 +420,71 @@
     </section>
 
     <section class="guides-section" id="experience">
-        <h2 class="section-title">Professional Experience</h2>
+        <h2 class="section-title">Professional Background</h2>
 
-        <div class="guides-grid">
-            <div class="guide-card">
-                <span class="guide-icon">🤖</span>
-                <h3>AI Automation Consultant</h3>
-                <p><strong>NexusAutomation AI</strong> | Aug 2025 – Present | Danbury, CT</p>
-
-                <ul class="guide-features">
-                    <li>Consult on AI automation projects implementing agentic workflows for lead gen, CRM, content
-                        creation, and enterprise system management</li>
-                    <li>Utilized LLM integrations to implement marketing campaign automations saving 20+ hours of work
-                        weekly</li>
-                    <li>Implemented automatic, personalized cold email outreach to 1000+ validated leads, saving 300+
-                        hours of work</li>
-                </ul>
-
-                <div class="guide-buttons">
-                    <a href="https://nexusautomationai.com" class="guide-button btn-primary" target="_blank">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+            <!-- Experience Column -->
+            <div>
+                <h3 style="color: #4ecdc4; font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">💼 Experience</h3>
+                
+                <div class="guide-card" style="margin-bottom: 1.5rem;">
+                    <h4 style="color: #4ecdc4; margin-bottom: 0.5rem;">AI Automation Consultant</h4>
+                    <p style="margin-bottom: 0.5rem;"><strong>NexusAutomation AI</strong> | Aug 2025 – Present</p>
+                    <ul class="guide-features" style="font-size: 0.9rem;">
+                        <li>Implemented agentic workflows saving 300+ hours of manual work</li>
+                        <li>LLM integrations for marketing automation (20+ hours/week saved)</li>
+                        <li>Enterprise system management and lead generation</li>
+                    </ul>
+                    <a href="https://nexusautomationai.com" class="guide-button btn-primary" target="_blank" style="font-size: 0.8rem; padding: 0.5rem 1rem;">
                         🌐 Visit Agency
                     </a>
-                    <a href="mailto:oelmady@gmail.com" class="guide-button btn-secondary">
-                        � Contact Me
-                    </a>
+                </div>
+
+                <div class="guide-card">
+                    <h4 style="color: #4ecdc4; margin-bottom: 0.5rem;">Software Development Engineer Intern</h4>
+                    <p style="margin-bottom: 0.5rem;"><strong>Amazon Web Services (AWS)</strong> | Jun 2025 – Aug 2025</p>
+                    <ul class="guide-features" style="font-size: 0.9rem;">
+                        <li>Enabled $1M+ monthly revenue for FSx Windows</li>
+                        <li>Automated workflows saving 10+ developer hours weekly</li>
+                        <li>Java, PostgreSQL, Ruby development with Agile methodology</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="guide-card">
-                <span class="guide-icon">☁️</span>
-                <h3>Software Development Engineer Intern</h3>
+            <!-- Education & Skills Column -->
+            <div>
+                <h3 style="color: #4ecdc4; font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">🎓 Education & Skills</h3>
+                
+                <div class="guide-card" style="margin-bottom: 1.5rem;">
+                    <h4 style="color: #4ecdc4; margin-bottom: 0.5rem;">Masters in Computer Science</h4>
+                    <p style="margin-bottom: 0.5rem;"><strong>Northeastern University</strong> | 2023-2025 | GPA: 3.7/4.0</p>
+                    <p style="font-size: 0.9rem; color: #b0b0b0;">Algorithms, Software Engineering, AI/ML, Computer Vision</p>
+                </div>
+
+                <div class="guide-card" style="margin-bottom: 1.5rem;">
+                    <h4 style="color: #4ecdc4; margin-bottom: 0.5rem;">BS Psychology</h4>
+                    <p style="margin-bottom: 0.5rem;"><strong>Carnegie Mellon University</strong> | 2017-2021 | GPA: 3.52/4.0</p>
+                    <p style="font-size: 0.9rem; color: #b0b0b0;">Programming Foundations, Advanced Statistics</p>
+                </div>
+
+                <div class="guide-card">
+                    <h4 style="color: #4ecdc4; margin-bottom: 0.5rem;">Technical Skills</h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span style="background: rgba(78, 205, 196, 0.2); color: #4ecdc4; padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.8rem;">Java (3yrs)</span>
+                        <span style="background: rgba(78, 205, 196, 0.2); color: #4ecdc4; padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.8rem;">Python (2yrs)</span>
+                        <span style="background: rgba(78, 205, 196, 0.2); color: #4ecdc4; padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.8rem;">Spring Boot</span>
+                        <span style="background: rgba(78, 205, 196, 0.2); color: #4ecdc4; padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.8rem;">AWS</span>
+                        <span style="background: rgba(78, 205, 196, 0.2); color: #4ecdc4; padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.8rem;">SQL</span>
+                        <span style="background: rgba(78, 205, 196, 0.2); color: #4ecdc4; padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.8rem;">React</span>
+                        <span style="background: rgba(78, 205, 196, 0.2); color: #4ecdc4; padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.8rem;">LLM APIs</span>
+                        <span style="background: rgba(78, 205, 196, 0.2); color: #4ecdc4; padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.8rem;">AI/ML</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guides-section" id="portfolio" style="background: #f8f9fa;">
                 <p><strong>Amazon Web Services (AWS)</strong> | Jun 2025 – Aug 2025 | Boston, MA</p>
 
                 <ul class="guide-features">
@@ -528,82 +574,93 @@
         </div>
     </section>
 
-    <section class="about-section" id="about">
-        <div class="about-content">
-            <h2 class="section-title">Education & Skills</h2>
+    <section class="guides-section" id="interests">
+        <h2 class="section-title">Research & Thought Leadership</h2>
+        <p style="text-align: center; color: #b0b0b0; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Exploring the intersection of AI, automation, and business transformation through comprehensive research and practical frameworks.
+        </p>
 
-            <div class="guides-grid" style="margin-bottom: 3rem;">
-                <div class="guide-card">
-                    <span class="guide-icon">🎓</span>
-                    <h3>Masters in Computer Science</h3>
-                    <p><strong>Northeastern University</strong> | Jan 2023 – Dec 2025 | Arlington, VA</p>
-                    <ul class="guide-features">
-                        <li>GPA: 3.7/4.0</li>
-                        <li>Relevant Coursework: Algorithms, Object-Oriented Design, Software Engineering, Computer
-                            Vision, AI/ML</li>
-                    </ul>
-                </div>
+        <div class="guides-grid">
+            <div class="guide-card">
+                <span class="guide-icon">🚀</span>
+                <h3>AI Startup Success Patterns</h3>
+                <p>Strategic guide to landing founding engineer roles at winning AI startups. Based on 2025 market research and insider insights.</p>
 
-                <div class="guide-card">
-                    <span class="guide-icon">🧠</span>
-                    <h3>Bachelor of Science in Psychology</h3>
-                    <p><strong>Carnegie Mellon University</strong> | Aug 2017 – May 2021 | Pittsburgh, PA</p>
-                    <ul class="guide-features">
-                        <li>GPA: 3.52/4.0</li>
-                        <li>Relevant Coursework: Programming Foundations, Advanced Statistics</li>
-                    </ul>
+                <ul class="guide-features">
+                    <li>Market analysis of $100B+ AI funding landscape</li>
+                    <li>Red flags to avoid (99% of wrapper apps will fail)</li>
+                    <li>Compensation trends (+5-20% AI premium)</li>
+                    <li>Interview questions and due diligence framework</li>
+                    <li>Interactive scoring system for opportunities</li>
+                </ul>
+
+                <div class="guide-buttons">
+                    <a href="guides/ai-startup-success.html" class="guide-button btn-primary">
+                        📖 Read Guide
+                    </a>
+                    <a href="guides/ai-startup-success-pdf.html" class="guide-button btn-secondary">
+                        📄 PDF Version
+                    </a>
                 </div>
             </div>
 
-            <h3 style="text-align: center; color: #4ecdc4; margin-bottom: 2rem;">Technical Skills</h3>
-            <div class="guides-grid">
-                <div class="guide-card">
-                    <span class="guide-icon">💻</span>
-                    <h3>Programming</h3>
-                    <ul class="guide-features">
-                        <li>Java (3+ years)</li>
-                        <li>Python (2+ years)</li>
-                        <li>SQL (2+ years)</li>
-                        <li>C/C++, Ruby, XML, Bash</li>
-                    </ul>
-                </div>
+            <div class="guide-card">
+                <span class="guide-icon">🔗</span>
+                <h3>Supply Chain AI Automation</h3>
+                <p>Complete roadmap for entrepreneurs and freelancers in manufacturing AI. Build expertise while empowering your community with high-paying remote careers.</p>
 
-                <div class="guide-card">
-                    <span class="guide-icon">🔧</span>
-                    <h3>Technologies</h3>
-                    <ul class="guide-features">
-                        <li>Spring Boot, React, PostgreSQL</li>
-                        <li>AWS Cloud Services</li>
-                        <li>Test-Driven Development</li>
-                        <li>Agile/SDLC, Git</li>
-                    </ul>
-                </div>
+                <ul class="guide-features">
+                    <li>$50-300/hour freelance opportunities mapped</li>
+                    <li>Document AI, predictive maintenance, optimization</li>
+                    <li>Remote work landscape ($70K-$180K annually)</li>
+                    <li>Skills development roadmap from basics to expert</li>
+                    <li>Community training and wealth-building strategy</li>
+                </ul>
 
-                <div class="guide-card">
-                    <span class="guide-icon">🤖</span>
-                    <h3>AI & Automation</h3>
-                    <ul class="guide-features">
-                        <li>LLM Integrations</li>
-                        <li>Agentic Workflows</li>
-                        <li>Marketing Automation</li>
-                        <li>Computer Vision, ML</li>
-                    </ul>
+                <div class="guide-buttons">
+                    <a href="guides/supply-chain-ai-guide.html" class="guide-button btn-primary">
+                        🔧 Explore Guide
+                    </a>
+                    <a href="mailto:oelmady@gmail.com" class="guide-button btn-secondary">
+                        💬 Discuss Research
+                    </a>
                 </div>
             </div>
 
-            <div style="margin-top: 3rem; text-align: center;">
-                <h3 style="color: #4ecdc4; margin-bottom: 1rem;">Let's Work Together</h3>
-                <p>Experienced in AI-accelerated software development with Java, Spring Boot, AWS cloud, and database
-                    integration using modern development practices including test-driven development, Agile methodology,
-                    and scalable system design.</p>
-                <div style="margin-top: 2rem;">
-                    <a href="https://nexusautomationai.com" class="cta-button cta-primary" target="_blank">
-                        🚀 Visit My Agency
+            <div class="guide-card">
+                <span class="guide-icon">📊</span>
+                <h3>Industry Insights</h3>
+                <p>Deep-dive analysis into emerging trends in AI automation, manufacturing technology, and the future of work.</p>
+
+                <ul class="guide-features">
+                    <li>Enterprise AI adoption patterns</li>
+                    <li>Manufacturing automation ROI analysis</li>
+                    <li>Remote work technology assessment</li>
+                    <li>Economic impact of AI on supply chains</li>
+                    <li>Strategic frameworks for business transformation</li>
+                </ul>
+
+                <div class="guide-buttons">
+                    <a href="whitepaper.md" class="guide-button btn-primary">
+                        📋 View Whitepaper
                     </a>
-                    <a href="mailto:oelmady@gmail.com" class="cta-button cta-secondary">
-                        📧 Get In Touch
+                    <a href="industry.md" class="guide-button btn-secondary">
+                        🏭 Industry Analysis
                     </a>
                 </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center;">
+            <h3 style="color: #4ecdc4; margin-bottom: 1rem;">Let's Work Together</h3>
+            <p style="max-width: 600px; margin: 0 auto;">Experienced in AI-accelerated software development with Java, Spring Boot, AWS cloud, and database integration using modern development practices including test-driven development, Agile methodology, and scalable system design.</p>
+            <div style="margin-top: 2rem;">
+                <a href="https://nexusautomationai.com" class="cta-button cta-primary" target="_blank">
+                    🚀 Visit My Agency
+                </a>
+                <a href="mailto:oelmady@gmail.com" class="cta-button cta-secondary">
+                    📧 Get In Touch
+                </a>
             </div>
         </div>
     </section>
