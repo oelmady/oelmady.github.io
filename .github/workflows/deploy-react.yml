@@ -15,40 +15,46 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
+      - name: Checkout
+        uses: actions/checkout@v4
         
-    - name: Install dependencies
-      working-directory: ./agency-site
-      run: npm install
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        working-directory: ./agency-site
+        run: npm install
+          
+      - name: Build React app
+        working-directory: ./agency-site
+        run: npm run build
         
-    - name: Build React app
-      working-directory: ./agency-site
-      run: npm run build
-      
-    - name: Setup Pages
-      uses: actions/configure-pages@v3
-      
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v2
-      with:
-        path: './agency-site/build'
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './agency-site/build'
 
+  # Deployment job
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
