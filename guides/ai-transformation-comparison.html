@@ -7,12 +7,12 @@
     <title>AI Transformation Comparison Tool | Omar Elmady</title>
     <meta name="description"
         content="Interactive visualization comparing tool-based vs architecture-based AI transformation approaches. See 5-year ROI, productivity, and employee impact data.">
-    
+
     <!-- React and Recharts from CDN -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/recharts@2.8.0/esm/index.js" type="module"></script>
-    
+
     <style>
         * {
             margin: 0;
@@ -359,20 +359,22 @@
         <div class="hero-section">
             <h1 class="hero-title">AI Transformation Comparison</h1>
             <p class="hero-subtitle">
-                Interactive visualization showing the dramatic difference between tool-based and architecture-based AI adoption
+                Interactive visualization showing the dramatic difference between tool-based and architecture-based AI
+                adoption
             </p>
         </div>
 
         <div id="react-app">
             <div class="loading-placeholder">
                 <h3 style="color: #4ecdc4; margin-bottom: 1rem;">Loading Interactive Charts...</h3>
-                <p style="color: #b0b0b0;">Preparing ROI analysis, productivity comparisons, and process efficiency metrics</p>
+                <p style="color: #b0b0b0;">Preparing ROI analysis, productivity comparisons, and process efficiency
+                    metrics</p>
             </div>
         </div>
 
         <div class="chart-container">
             <h3 class="chart-title">Key Insights: Why Architecture Wins</h3>
-            
+
             <div class="comparison-grid">
                 <div class="comparison-card tool-approach">
                     <div class="card-title">🚩 Tool Approach Issues</div>
@@ -409,7 +411,9 @@
 
             <div class="insight-box">
                 <div class="insight-title">The Mathematical Reality</div>
-                <p>Architecture-based approaches create compound improvements while tool-based approaches plateau. Early architecture investment creates impossible-to-catch competitive advantages that compound over time.</p>
+                <p>Architecture-based approaches create compound improvements while tool-based approaches plateau. Early
+                    architecture investment creates impossible-to-catch competitive advantages that compound over time.
+                </p>
             </div>
         </div>
 
@@ -460,7 +464,8 @@
 
         <div class="cta-section">
             <h2 style="color: #4ecdc4; margin-bottom: 1rem;">Transform Your AI Strategy</h2>
-            <p style="margin-bottom: 2rem;">Move beyond tool adoption to systematic process architecture that creates lasting competitive advantages.</p>
+            <p style="margin-bottom: 2rem;">Move beyond tool adoption to systematic process architecture that creates
+                lasting competitive advantages.</p>
             <div>
                 <a href="https://nexusautomationai.com" class="cta-button" target="_blank">
                     🚀 Schedule Strategy Session
@@ -476,9 +481,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         // Replace the React app placeholder with simplified charts
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const appContainer = document.getElementById('react-app');
-            
+
             // Create chart containers
             appContainer.innerHTML = `
                 <div class="view-selector">
@@ -554,7 +559,7 @@
             let currentChart = null;
 
             // Function to show different charts
-            window.showChart = function(type) {
+            window.showChart = function (type) {
                 // Update button states
                 document.querySelectorAll('.view-button').forEach(btn => btn.classList.remove('active'));
                 event.target.classList.add('active');
@@ -567,7 +572,7 @@
                 // Create new chart
                 const ctx = document.getElementById('mainChart').getContext('2d');
                 const data = chartData[type];
-                
+
                 currentChart = new Chart(ctx, {
                     type: type === 'investment' ? 'bar' : 'line',
                     data: {
